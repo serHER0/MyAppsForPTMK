@@ -58,9 +58,7 @@ namespace MyApps
                         catch (Exception ex)
                         {
                             Console.WriteLine("Error creating table: " + ex.Message);
-                        }
-
-                        Console.ReadLine();
+                        }             
                         break;
                     case 2:
                         Console.WriteLine("Пункт создания записи, введите Фамилию Имя Отчество дату рождения Пол через пробелы \n Пример: \nПетров Анатолий Евгеньевич 22.04.1986 мужской");
@@ -94,6 +92,7 @@ namespace MyApps
                         catch (Exception ex)
                         {
                             Console.WriteLine("Error:" + ex.Message);
+                            Console.WriteLine("Возможно вы не создали таблицу, перезапустите приложение и выберите пункт 1");
                         }
                         break; 
                     case 3:
@@ -131,6 +130,7 @@ namespace MyApps
                             catch (Exception ex)
                             {
                                 Console.WriteLine("Error:" + ex.Message);
+                                Console.WriteLine("Возможно вы не создали таблицу, перезапустите приложение и выберите пункт 1");
                             }
                             finally
                             {
@@ -209,6 +209,7 @@ namespace MyApps
                             catch (Exception ex)
                             {
                                 Console.WriteLine("Error:" + ex.Message);
+                                Console.WriteLine("Возможно вы не создали таблицу, перезапустите приложение и выберите пункт 1");
                             }
                             try
                             {
@@ -268,7 +269,7 @@ namespace MyApps
                                     Console.WriteLine($"{LastName}||{Name}||{SurName}||{dateOfBrith.ToString("dd.MM.yyyy")}||{Gender}||{age}");
                                 }
                             }
-                            catch (Exception ex) { Console.WriteLine(ex.Message); }
+                            catch (Exception ex) { Console.WriteLine(ex.Message); Console.WriteLine("Возможно вы не создали таблицу, перезапустите приложение и выберите пункт 1"); }
                         }
                         stopwatch.Stop();
                         Console.WriteLine("Время выполнения: {0} мс", stopwatch.ElapsedMilliseconds);                       
